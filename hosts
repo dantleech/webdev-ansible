@@ -1,0 +1,5 @@
+[dbservers]
+db # host name or IP address
+
+[nwebservers]
+web # host name or IP address
