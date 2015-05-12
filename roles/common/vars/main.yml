@@ -1,0 +1,4 @@
+users:
+    - { username: "daniel", password: "$6$b4WUCE63U2$msZWZ22kjG6Neuh2YUdcZysXaH0KDWT9z2QXHk6iimSOJWPolTfJIViVIidcwozvJyuRnA.IA9xtpssEHOyrO1" }
+    - { username: "foobar", password: "$6$b4WUCE63U2$msZWZ22kjG6Neuh2YUdcZysXaH0KDWT9z2QXHk6iimSOJWPolTfJIViVIidcwozvJyuRnA.IA9xtpssEHOyrO1" }
+    - { username: "barfoo", password: "$6$b4WUCE63U2$msZWZ22kjG6Neuh2YUdcZysXaH0KDWT9z2QXHk6iimSOJWPolTfJIViVIidcwozvJyuRnA.IA9xtpssEHOyrO1" }

@@ -1,5 +1,12 @@
-[dbservers]
-db # host name or IP address
+# Host inventory - the machines which are to be managed
+#
+# Each section can have multiple hosts
+# Hosts can either be hostnames or IP addresses
+# Host specific options can be provided (see ansible documentation)
 
-[nwebservers]
-web # host name or IP address
+[webservers]
+web1:2020
+web2:2021
+
+[loadbalancer]
+loadbalancer:2022

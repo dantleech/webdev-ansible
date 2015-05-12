@@ -1,4 +1,11 @@
-- name: Common configuration
-  hosts: all
+- hosts: all
   roles:
     - common
+
+- hosts: webservers
+  roles:
+    - webserver
+
+- hosts: loadbalancer
+  roles:
+    - haproxy

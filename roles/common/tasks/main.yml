@@ -1,1 +1,15 @@
-- include: packages.yml tags=packages
+- include: packages.yml
+- include: users.yml
+
+- apt: pkg=htop state=absent
+  sudo: true
+
+  # Generate password with:  mkpasswd --method=SHA-512
+- name: Create user
+  sudo: true
+  user: name=daniel password="$6$IZCcXiGXm$KQ3jXWFf/uDf9IOHRcRtf.ac9Vwnmo3agn7Bs9mOB9Ekg2NXEV6.rYsfZqWxsKG0kWvAnL/VTYdKQjg8BIWNi1" shell=/bin/bash
+
+- name: Create users
+  sudo: true
+  user: name="{{ item.username }}" password="{{ item.password }}" shell=/bin/bash state=present
+  with_items: users

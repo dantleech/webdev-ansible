@@ -1,0 +1,8 @@
+- name: Install HAProxy
+  sudo: true
+  apt: pkg=haproxy
+
+- name: Install HAProxy config
+  sudo: true
+  template: src=haproxy.cfg dest=/etc/haproxy/haproxy.cfg
+  notify: restart-haproxy

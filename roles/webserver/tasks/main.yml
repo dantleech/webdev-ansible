@@ -1,0 +1,19 @@
+- name: Install apache
+  sudo: true
+  apt: pkg={{ item }} state=present
+  with_items:
+    - apache2
+    - libapache2-mod-php5
+
+- name: Add virtual host
+  sudo: true
+  copy: src=default.conf dest=/etc/apache2/sites-enabled/000-default.conf
+  notify: restart-apache
+
+- name: Ensure directory exists
+  sudo: true
+  file: path=/var/www/webdev state=directory
+
+- name: Add the web application
+  sudo: true
+  copy: src=index.php dest=/var/www/webdev/index.php
